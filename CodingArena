@@ -1,0 +1,53 @@
+#AniDB#
+
+d={'naruto':[]}
+
+g={}
+
+c={}
+
+i=input('do you want to start the program "y/n"')
+
+n=int(input('''
+enter your choice:
+            1. To search by Name
+            2. To search by Genre
+            3. To search by Character
+'''))
+
+def by_name():
+    nm = input('enter name of anime: ')
+    if nm in d.keys():
+        print(d.get(nm))
+    else:
+        print('cant find search results for',"'",nm,"'")
+
+def by_genre():
+    gn = input('enter genre of anime: ')
+    if gn in g.keys():
+        print(g.get(gn))
+    else:
+        print('cant find search results for',"'",gn,"'")
+
+def by_char():
+    cn = input('enter character of anime: ')
+    if cn in c.keys():
+        print(c.get(cn))
+    else:
+        print('cant find search results for',"'",cn,"'")
+
+while i in 'yY':
+    if n==1:
+        by_name()
+    if n==2:
+        by_genre()
+    if n==3:
+        by_char()
+    i=input('do you want to continue the program "y/n"')
+
+print('******************************')
+
+print('The program has ended')
+
+print('Thank you for using AniDB')
+
